@@ -25,7 +25,7 @@ class GithubRepositorySpec: QuickSpec {
                 let correctName = repoDictionary["full_name"] as! String
                 
                 it("should create a Github Repository object with the correct data") {
-                    let repo = GithubRepository(dictionary: repoDictionary)
+                    let repo = GithubRepository(repository: repoDictionary)
                     expect(repo.repositoryID).to(equal(correctID.stringValue))
                     expect(repo.htmlURL).to(equal(NSURL(string: correctURL)))
                     expect(repo.fullName).to(equal(correctName))
